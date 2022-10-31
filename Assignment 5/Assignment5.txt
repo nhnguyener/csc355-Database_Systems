@@ -1,0 +1,124 @@
+/*
+Nathan Nguyen
+CSC 355 Section 510
+Assignment 5
+March 1st, 2021
+*/
+
+1a)	Subset 	=	Closure;
+	(X)+	=	X;
+	(Y)+	=	YZ;
+	(Z)+	=	Z;
+	(XY)+	=	XY;
+	(XZ)+	=	XZY;
+	(YZ)+	=	YXZ;
+	(XYZ)+	=	XYZ;
+
+1b)	Superkeys of R
+	XZ, YZ, XYZ;
+
+1c) Candidate keys of R
+	XZ, YZ;
+	
+1d) R in BCNF?
+	No because Y->X is a partial dependency and is present in functional dependencies.
+	Also for Y->X left hand side Y is not a superkey.
+	
+2a)	Game(GID, Title, Version, Category, Equipment)
+	GID	-> Title, Version
+	Title, Version -> GID
+	Category -> Equipment
+	Title -> Category, Equipment
+	
+	For BCNF X -> Y:
+		X is superkey;
+		Category -> Equipment not in BCNF;
+		Ttile, Category, Equipment not in BCNF;
+	
+	When key = GID:
+		GID -> Title, Version now in BCNF;
+	When key = Title:
+		Title -> Category, Equipment now in in BCNF;
+		and
+		Category -> Equipment now in in BCNF;
+	When key = Category:
+		Category -> Equipment now in BCNF;
+	
+2b)	Game in 3NF?
+	Game is not in 3NF because of functional dependencies
+		Category -> Equipment
+		and
+		Title -> Category, Equipment
+	which do not fit definition of 3NF which states that if:
+		Relation is in 2NF;
+		and
+		Has functional dependency X -> Y;
+	then:
+		X is superkey;
+		or
+		Y is prime attribute;
+
+3a)	Projections of F on R1 and R2
+	F = { B -> C ; C -> A, B ; D -> A, B };
+	R1(A, D);
+	R2(B, C, D);
+	FD's:
+		B -> C;
+		C -> A;
+		C -> B;
+		D -> A;
+		D -> B;
+	Candidate Key:
+		D = { B, A, C, D };
+	
+	R1 Projection: { D -> A };
+	R2 Projection: { B -> C ; D -> B ; D -> C ; C -> B; BD -> C; CD -> B };
+	
+3b) Decomposition have the Dependency Preservation Property?
+	No, does not have DPP because:
+	
+	R1(A, D):
+		Closure A = {A};
+		Closure D = {D, A};
+		so { D -> A };
+	
+	R2(B, C, D):
+		Closure B = {B, C} so B -> C;
+		Closure C = {C, B} so C -> B;
+		Closure D = {D, B, C} so D -> B and D -> C;
+		Closure BC = {B, C};
+		Closure BD = {B, D, C} so BD -> C;
+		Closure CD = {C, D, B} so CD -> B;
+		so { B -> C ; D -> B ; D -> C ; C -> B; BD -> C; CD -> B };
+	
+	F = { B -> C ; C -> A, B ; D -> A, B }:
+		B -> C in FDR2;
+		C -> A not present = NOT PRESERVED;
+		C -> B in FDR2;
+		D -> A in FDR1;
+		D -> B in FDR2;
+		so FDR1 U FDR2 is subset of F
+		
+	So decomp is not DPP;
+	
+3c) Decomp has Lossless Join Property?
+	Yes.
+	
+	Conditions:
+		R1 Attribute U R2 Attribute = R Attribute | True;
+		R1 Attribute ∩ R2 Attribute =/ 0 | True;
+		R1 Attribute ∩ R2 Attribute must be key for min. 1 relation of R1 or R2
+			{D} in R1 = {D, A}
+			{D} in R2 = {B, C, D}
+			so AD ∩ DBC where D is key of both
+			so condition | True;
+			
+4)	F = { a -> b ; b, c -> a ; c -> d, e, a ; d -> e }
+		c -> d, e, a = c -> d ; c -> e; c -> a;
+		
+	G = { a -> b ; c -> d ; c -> a ; d -> e } 
+	
+	Remove c -> e because transitive dependency;
+	Remove b in bc -> a because redundant variable in C+ = { a, b, c, d, e };
+	Result: {a -> b, c -> a, c -> d, d -> e};
+	

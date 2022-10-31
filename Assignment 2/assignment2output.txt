@@ -1,0 +1,70 @@
+
+Table ASSIGNMENT dropped.
+
+
+Table PHYSICIAN dropped.
+
+
+Table DEPARTMENT dropped.
+
+
+Table PHYSICIAN created.
+
+
+Table DEPARTMENT created.
+
+
+Table ASSIGNMENT created.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+PID PNAME                                        PPHONE
+--- ---------------------------------------- ----------
+404 Nathan Nguyen                               1025099
+232 Alvin Lam                                   5259291
+690 Lily Lin                                    5116788
+
+
+DID  DNAME                                    HOSPITALNAME                                 DFLOOR
+---- ---------------------------------------- ---------------------------------------- ----------
+1001 Physical                                 Weiss                                            10
+1002 Neuroscience                             Weiss                                            12
+2001 Chemotherapy                             Swedish                                          20
+
+
+PHY DEPA STARTINGD ENDINGDAT
+--- ---- --------- ---------
+404 1001 01-JAN-21 10-JAN-21
+404 1002 11-JAN-21 20-JAN-21
+232 2001 01-JAN-21 15-JAN-21
+690 2001 15-JAN-21 30-JAN-21
+

@@ -1,0 +1,79 @@
+
+TNAME                    AI ANAME               
+------------------------ -- --------------------
+Ghost                    02 Ethan Hunt          
+Ghost                    05 Benjie Dunn         
+Ghost                    06 Jane Carter         
+Ghost                    07 William Brandt      
+
+
+TNAME                   
+------------------------
+Original
+Prequel
+
+
+AG ANAME                TEAMS JOINED
+-- -------------------- ------------
+02 Ethan Hunt                      3
+07 William Brandt                  2
+01 Jim Phelps                      2
+03 Claire Phelps                   2
+04 Luther Stickell                 2
+05 Benjie Dunn                     1
+08 August Walker                   1
+06 Jane Carter                     1
+
+8 rows selected. 
+
+
+LOCATION                
+------------------------
+London
+Kashmir
+Paris
+
+
+       TID TNAME                    SUM(HOURS)
+---------- ------------------------ ----------
+         8 Fake                               
+         6 Fallout                         380
+         4 Ghost                           300
+         1 Original                        270
+         0 Prequel                         130
+
+
+MIS ANAME               
+--- --------------------
+L03 Ethan Hunt          
+C01 Jim Phelps          
+L01 Jim Phelps          
+B01 Ethan Hunt          
+K02 Ethan Hunt          
+P01 Jim Phelps          
+M01 Ethan Hunt          
+L02 Ethan Hunt          
+D01 Ethan Hunt          
+M02 Ethan Hunt          
+P02 Ethan Hunt          
+
+11 rows selected. 
+
+
+ANAME                    SALARY
+-------------------- ----------
+William Brandt           125000
+August Walker            175000
+Julia Meade              200000
+Jane Carter              250000
+Luther Stickell          300000
+Alan Hunley              750000
+Claire Phelps            750000
+
+7 rows selected. 
+
+
+MISSIONS PERFORMED WITH WILLIAM BRANDT
+--------------------------------------
+                                     8
+

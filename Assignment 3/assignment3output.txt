@@ -1,0 +1,2343 @@
+
+WAREHOUSEID CITY                 ST       SQFT MANAGER             
+----------- -------------------- -- ---------- --------------------
+        111 Darien               IL     200000 Gonzalez            
+        222 Racine               WI     100000 Craft               
+        333 Rockford             IL      40000 Jackson             
+        444 Rockford             IL      60000 Jackson             
+        555 Janesville           WI      75000 Park                
+        666 Gary                 IN      50000 Solomon             
+        777 Gary                 IN      25000 Miller              
+
+7 rows selected. 
+
+
+CITY                
+--------------------
+Darien
+Racine
+Rockford
+Rockford
+Janesville
+Gary
+Gary
+
+7 rows selected. 
+
+
+CITY                
+--------------------
+Darien
+Gary
+Gary
+Janesville
+Racine
+Rockford
+Rockford
+
+7 rows selected. 
+
+
+Error starting at line : 9 in command -
+NCT CITY
+Error report -
+Unknown Command
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+WAREHOUSEID CITY                 ST       SQFT MANAGER             
+----------- -------------------- -- ---------- --------------------
+        111 Darien               IL     200000 Gonzalez            
+        222 Racine               WI     100000 Craft               
+        444 Rockford             IL      60000 Jackson             
+        555 Janesville           WI      75000 Park                
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+WAREHOUSEID CITY                 ST       SQFT MANAGER             
+----------- -------------------- -- ---------- --------------------
+        111 Darien               IL     200000 Gonzalez            
+        444 Rockford             IL      60000 Jackson             
+        333 Rockford             IL      40000 Jackson             
+        777 Gary                 IN      25000 Miller              
+        666 Gary                 IN      50000 Solomon             
+        555 Janesville           WI      75000 Park                
+        222 Racine               WI     100000 Craft               
+
+7 rows selected. 
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST       SQFT
+-- ----------
+IL     200000
+IL      60000
+IL      40000
+IN      25000
+IN      50000
+WI      75000
+WI     100000
+
+7 rows selected. 
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST       SQFT
+-- ----------
+IL      40000
+IL      60000
+IL     200000
+IN      25000
+IN      50000
+WI      75000
+WI     100000
+
+7 rows selected. 
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST
+--
+IL
+IN
+WI
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+Error starting at line : 19 in command -
+SELECT DISTINCT STATE, MAX(SQFT) 
+	FROM WAREHOUSE
+	ORDER BY STATE
+Error at Command Line : 19 Column : 17
+Error report -
+SQL Error: ORA-00937: not a single-group group function
+00937. 00000 -  "not a single-group group function"
+*Cause:    
+*Action:
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ MAX(SQFT)
+----------
+    200000
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ MAX(SQFT)
+----------
+    200000
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+Error starting at line : 19 in command -
+SELECT DISTINCT STATE, SQFT
+	FROM WAREHOUSE
+	WHERE MAX(SQFT)
+	ORDER BY STATE
+Error at Command Line : 21 Column : 8
+Error report -
+SQL Error: ORA-00934: group function is not allowed here
+00934. 00000 -  "group function is not allowed here"
+*Cause:    
+*Action:
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+Error starting at line : 19 in command -
+SELECT DISTINCT STATE, MAX(SQFT) AS MSQFT
+	FROM WAREHOUSE
+	ORDER BY STATE
+Error at Command Line : 19 Column : 17
+Error report -
+SQL Error: ORA-00937: not a single-group group function
+00937. 00000 -  "not a single-group group function"
+*Cause:    
+*Action:
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ MAX(SQFT)
+----------
+    200000
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST       SQFT
+-- ----------
+IL     200000
+IL      40000
+IL      60000
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+Error starting at line : 19 in command -
+SELECT STATE, MAX(SQFT)
+	FROM WAREHOUSE
+	WHERE DISTINCT STATE
+	ORDER BY STATE
+Error at Command Line : 21 Column : 8
+Error report -
+SQL Error: ORA-00936: missing expression
+00936. 00000 -  "missing expression"
+*Cause:    
+*Action:
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+Error starting at line : 19 in command -
+SELECT STATE, MAX(SQFT)
+	FROM WAREHOUSE
+	ORDER BY STATE
+Error at Command Line : 19 Column : 8
+Error report -
+SQL Error: ORA-00937: not a single-group group function
+00937. 00000 -  "not a single-group group function"
+*Cause:    
+*Action:
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+Error starting at line : 19 in command -
+SELECT STATE, MAX(SQFT)
+	FROM WAREHOUSE
+	ORDER BY STATE
+Error at Command Line : 19 Column : 8
+Error report -
+SQL Error: ORA-00937: not a single-group group function
+00937. 00000 -  "not a single-group group function"
+*Cause:    
+*Action:
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST       SQFT
+-- ----------
+IL     200000
+IL      60000
+IL      40000
+IN      25000
+IN      50000
+WI      75000
+WI     100000
+
+7 rows selected. 
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST       SQFT
+-- ----------
+IL      40000
+IL      60000
+IL     200000
+IN      25000
+IN      50000
+WI      75000
+WI     100000
+
+7 rows selected. 
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST  MAX(SQFT)
+-- ----------
+IL     200000
+IN      50000
+WI     100000
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST  MAX(SQFT)
+-- ----------
+IL     200000
+IN      50000
+WI     100000
+
+
+PROD DESCRIPTION                    TYPE                       COST
+---- ------------------------------ -------------------- ----------
+D223 Desktop Computer               Electronics              499.99
+L901 Laptop Computer                Electronics              799.99
+L636 Laptop Computer                Electronics              659.99
+D225 Desktop Computer               Electronics              529.99
+M117 Monitor                        Electronics              159.99
+D088 Computer Desk                  Furniture                209.99
+D089 Standing Desk                  Furniture                359.99
+T443 Computer Table                 Furniture                129.99
+L271 Table Lamp                     Furniture                 59.99
+
+9 rows selected. 
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST  MAX(SQFT)
+-- ----------
+IL     200000
+IN      50000
+WI     100000
+
+
+PROD DESCRIPTION                    TYPE                       COST
+---- ------------------------------ -------------------- ----------
+L271 Table Lamp                     Furniture                 59.99
+T443 Computer Table                 Furniture                129.99
+M117 Monitor                        Electronics              159.99
+D088 Computer Desk                  Furniture                209.99
+D089 Standing Desk                  Furniture                359.99
+D223 Desktop Computer               Electronics              499.99
+D225 Desktop Computer               Electronics              529.99
+L636 Laptop Computer                Electronics              659.99
+L901 Laptop Computer                Electronics              799.99
+
+9 rows selected. 
+
+
+Error starting at line : 27 in command -
+COST)
+Error report -
+Unknown Command
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST  MAX(SQFT)
+-- ----------
+IL     200000
+IN      50000
+WI     100000
+
+
+Error starting at line : 25 in command -
+SELECT *
+	FROM PRODUCT
+	ORDER BY DESC COST
+Error at Command Line : 27 Column : 11
+Error report -
+SQL Error: ORA-00936: missing expression
+00936. 00000 -  "missing expression"
+*Cause:    
+*Action:
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST  MAX(SQFT)
+-- ----------
+IL     200000
+IN      50000
+WI     100000
+
+
+PROD DESCRIPTION                    TYPE                       COST
+---- ------------------------------ -------------------- ----------
+L901 Laptop Computer                Electronics              799.99
+L636 Laptop Computer                Electronics              659.99
+D225 Desktop Computer               Electronics              529.99
+D223 Desktop Computer               Electronics              499.99
+D089 Standing Desk                  Furniture                359.99
+D088 Computer Desk                  Furniture                209.99
+M117 Monitor                        Electronics              159.99
+T443 Computer Table                 Furniture                129.99
+L271 Table Lamp                     Furniture                 59.99
+
+9 rows selected. 
+
+
+Error starting at line : 25 in command -
+roductID,Cost
+Error report -
+Unknown Command
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST  MAX(SQFT)
+-- ----------
+IL     200000
+IN      50000
+WI     100000
+
+
+PROD       COST
+---- ----------
+L901     799.99
+L636     659.99
+D225     529.99
+D223     499.99
+D089     359.99
+D088     209.99
+M117     159.99
+T443     129.99
+L271      59.99
+
+9 rows selected. 
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST  MAX(SQFT)
+-- ----------
+IL     200000
+IN      50000
+WI     100000
+
+
+PROD       COST
+---- ----------
+L901     799.99
+L636     659.99
+D225     529.99
+D223     499.99
+D089     359.99
+D088     209.99
+M117     159.99
+T443     129.99
+L271      59.99
+
+9 rows selected. 
+
+
+PROD DESCRIPTION                    TYPE                       COST
+---- ------------------------------ -------------------- ----------
+L271 Table Lamp                     Furniture                 59.99
+T443 Computer Table                 Furniture                129.99
+M117 Monitor                        Electronics              159.99
+D088 Computer Desk                  Furniture                209.99
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST  MAX(SQFT)
+-- ----------
+IL     200000
+IN      50000
+WI     100000
+
+
+PROD       COST
+---- ----------
+L901     799.99
+L636     659.99
+D225     529.99
+D223     499.99
+D089     359.99
+D088     209.99
+M117     159.99
+T443     129.99
+L271      59.99
+
+9 rows selected. 
+
+
+DESCRIPTION                    TYPE                
+------------------------------ --------------------
+Table Lamp                     Furniture           
+Computer Table                 Furniture           
+Monitor                        Electronics         
+Computer Desk                  Furniture           
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST  MAX(SQFT)
+-- ----------
+IL     200000
+IN      50000
+WI     100000
+
+
+PROD       COST
+---- ----------
+L901     799.99
+L636     659.99
+D225     529.99
+D223     499.99
+D089     359.99
+D088     209.99
+M117     159.99
+T443     129.99
+L271      59.99
+
+9 rows selected. 
+
+
+DESCRIPTION                    TYPE                       COST
+------------------------------ -------------------- ----------
+Table Lamp                     Furniture                 59.99
+Computer Table                 Furniture                129.99
+Monitor                        Electronics              159.99
+Computer Desk                  Furniture                209.99
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST  MAX(SQFT)
+-- ----------
+IL     200000
+IN      50000
+WI     100000
+
+
+PROD       COST
+---- ----------
+L901     799.99
+L636     659.99
+D225     529.99
+D223     499.99
+D089     359.99
+D088     209.99
+M117     159.99
+T443     129.99
+L271      59.99
+
+9 rows selected. 
+
+
+DESCRIPTION                    TYPE                
+------------------------------ --------------------
+Table Lamp                     Furniture           
+Computer Table                 Furniture           
+Monitor                        Electronics         
+Computer Desk                  Furniture           
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST  MAX(SQFT)
+-- ----------
+IL     200000
+IN      50000
+WI     100000
+
+
+PROD       COST
+---- ----------
+L901     799.99
+L636     659.99
+D225     529.99
+D223     499.99
+D089     359.99
+D088     209.99
+M117     159.99
+T443     129.99
+L271      59.99
+
+9 rows selected. 
+
+
+DESCRIPTION                    TYPE                
+------------------------------ --------------------
+Table Lamp                     Furniture           
+Computer Table                 Furniture           
+Monitor                        Electronics         
+Computer Desk                  Furniture           
+
+
+Error starting at line : 36 in command -
+SELECT *
+	FROM PRODUCT
+	WHERE Description match(%desk)
+Error at Command Line : 38 Column : 20
+Error report -
+SQL Error: ORA-00920: invalid relational operator
+00920. 00000 -  "invalid relational operator"
+*Cause:    
+*Action:
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST  MAX(SQFT)
+-- ----------
+IL     200000
+IN      50000
+WI     100000
+
+
+PROD       COST
+---- ----------
+L901     799.99
+L636     659.99
+D225     529.99
+D223     499.99
+D089     359.99
+D088     209.99
+M117     159.99
+T443     129.99
+L271      59.99
+
+9 rows selected. 
+
+
+DESCRIPTION                    TYPE                
+------------------------------ --------------------
+Table Lamp                     Furniture           
+Computer Table                 Furniture           
+Monitor                        Electronics         
+Computer Desk                  Furniture           
+
+
+Error starting at line : 36 in command -
+SELECT *
+	FROM PRODUCT
+	WHERE Description MATCH(%Desk%)
+Error at Command Line : 38 Column : 20
+Error report -
+SQL Error: ORA-00920: invalid relational operator
+00920. 00000 -  "invalid relational operator"
+*Cause:    
+*Action:
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST  MAX(SQFT)
+-- ----------
+IL     200000
+IN      50000
+WI     100000
+
+
+PROD       COST
+---- ----------
+L901     799.99
+L636     659.99
+D225     529.99
+D223     499.99
+D089     359.99
+D088     209.99
+M117     159.99
+T443     129.99
+L271      59.99
+
+9 rows selected. 
+
+
+DESCRIPTION                    TYPE                
+------------------------------ --------------------
+Table Lamp                     Furniture           
+Computer Table                 Furniture           
+Monitor                        Electronics         
+Computer Desk                  Furniture           
+
+
+PROD DESCRIPTION                    TYPE                       COST
+---- ------------------------------ -------------------- ----------
+D223 Desktop Computer               Electronics              499.99
+D225 Desktop Computer               Electronics              529.99
+D088 Computer Desk                  Furniture                209.99
+D089 Standing Desk                  Furniture                359.99
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST  MAX(SQFT)
+-- ----------
+IL     200000
+IN      50000
+WI     100000
+
+
+PROD       COST
+---- ----------
+L901     799.99
+L636     659.99
+D225     529.99
+D223     499.99
+D089     359.99
+D088     209.99
+M117     159.99
+T443     129.99
+L271      59.99
+
+9 rows selected. 
+
+
+DESCRIPTION                    TYPE                
+------------------------------ --------------------
+Table Lamp                     Furniture           
+Computer Table                 Furniture           
+Monitor                        Electronics         
+Computer Desk                  Furniture           
+
+
+PROD DESCRIPTION                    TYPE                       COST
+---- ------------------------------ -------------------- ----------
+D088 Computer Desk                  Furniture                209.99
+D223 Desktop Computer               Electronics              499.99
+D225 Desktop Computer               Electronics              529.99
+D089 Standing Desk                  Furniture                359.99
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST  MAX(SQFT)
+-- ----------
+IL     200000
+IN      50000
+WI     100000
+
+
+PROD       COST
+---- ----------
+L901     799.99
+L636     659.99
+D225     529.99
+D223     499.99
+D089     359.99
+D088     209.99
+M117     159.99
+T443     129.99
+L271      59.99
+
+9 rows selected. 
+
+
+DESCRIPTION                    TYPE                
+------------------------------ --------------------
+Table Lamp                     Furniture           
+Computer Table                 Furniture           
+Monitor                        Electronics         
+Computer Desk                  Furniture           
+
+
+PROD DESCRIPTION                          COST
+---- ------------------------------ ----------
+D088 Computer Desk                      209.99
+D223 Desktop Computer                   499.99
+D225 Desktop Computer                   529.99
+D089 Standing Desk                      359.99
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST  MAX(SQFT)
+-- ----------
+IL     200000
+IN      50000
+WI     100000
+
+
+PROD       COST
+---- ----------
+L901     799.99
+L636     659.99
+D225     529.99
+D223     499.99
+D089     359.99
+D088     209.99
+M117     159.99
+T443     129.99
+L271      59.99
+
+9 rows selected. 
+
+
+DESCRIPTION                    TYPE                
+------------------------------ --------------------
+Table Lamp                     Furniture           
+Computer Table                 Furniture           
+Monitor                        Electronics         
+Computer Desk                  Furniture           
+
+
+PROD DESCRIPTION                          COST
+---- ------------------------------ ----------
+D088 Computer Desk                      209.99
+D223 Desktop Computer                   499.99
+D225 Desktop Computer                   529.99
+D089 Standing Desk                      359.99
+
+
+       WID PID      AMOUNT LASTCHECK
+---------- ---- ---------- ---------
+       333 T443         20 01-DEC-20
+       333 L271         42 01-DEC-20
+       333 L901         35 01-JAN-21
+       333 D223         60 01-JAN-21
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST  MAX(SQFT)
+-- ----------
+IL     200000
+IN      50000
+WI     100000
+
+
+PROD       COST
+---- ----------
+L901     799.99
+L636     659.99
+D225     529.99
+D223     499.99
+D089     359.99
+D088     209.99
+M117     159.99
+T443     129.99
+L271      59.99
+
+9 rows selected. 
+
+
+DESCRIPTION                    TYPE                
+------------------------------ --------------------
+Table Lamp                     Furniture           
+Computer Table                 Furniture           
+Monitor                        Electronics         
+Computer Desk                  Furniture           
+
+
+PROD DESCRIPTION                          COST
+---- ------------------------------ ----------
+D088 Computer Desk                      209.99
+D223 Desktop Computer                   499.99
+D225 Desktop Computer                   529.99
+D089 Standing Desk                      359.99
+
+
+       WID PID      AMOUNT LASTCHECK
+---------- ---- ---------- ---------
+       333 T443         20 01-DEC-20
+       333 L271         42 01-DEC-20
+       333 L901         35 01-JAN-21
+       333 D223         60 01-JAN-21
+
+
+Error starting at line : 45 in command -
+	ORDER BY Amount DESC
+Error report -
+Unknown Command
+
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST  MAX(SQFT)
+-- ----------
+IL     200000
+IN      50000
+WI     100000
+
+
+PROD       COST
+---- ----------
+L901     799.99
+L636     659.99
+D225     529.99
+D223     499.99
+D089     359.99
+D088     209.99
+M117     159.99
+T443     129.99
+L271      59.99
+
+9 rows selected. 
+
+
+DESCRIPTION                    TYPE                
+------------------------------ --------------------
+Table Lamp                     Furniture           
+Computer Table                 Furniture           
+Monitor                        Electronics         
+Computer Desk                  Furniture           
+
+
+PROD DESCRIPTION                          COST
+---- ------------------------------ ----------
+D088 Computer Desk                      209.99
+D223 Desktop Computer                   499.99
+D225 Desktop Computer                   529.99
+D089 Standing Desk                      359.99
+
+
+       WID PID      AMOUNT LASTCHECK
+---------- ---- ---------- ---------
+       333 D223         60 01-JAN-21
+       333 L271         42 01-DEC-20
+       333 L901         35 01-JAN-21
+       333 T443         20 01-DEC-20
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST  MAX(SQFT)
+-- ----------
+IL     200000
+IN      50000
+WI     100000
+
+
+PROD       COST
+---- ----------
+L901     799.99
+L636     659.99
+D225     529.99
+D223     499.99
+D089     359.99
+D088     209.99
+M117     159.99
+T443     129.99
+L271      59.99
+
+9 rows selected. 
+
+
+DESCRIPTION                    TYPE                
+------------------------------ --------------------
+Table Lamp                     Furniture           
+Computer Table                 Furniture           
+Monitor                        Electronics         
+Computer Desk                  Furniture           
+
+
+PROD DESCRIPTION                          COST
+---- ------------------------------ ----------
+D088 Computer Desk                      209.99
+D223 Desktop Computer                   499.99
+D225 Desktop Computer                   529.99
+D089 Standing Desk                      359.99
+
+
+PID      AMOUNT
+---- ----------
+D223         60
+L271         42
+L901         35
+T443         20
+
+
+Error starting at line : 48 in command -
+SELECT *
+	FROM INVENTORY
+	GROUP BY LastChecked
+Error at Command Line : 48 Column : 8
+Error report -
+SQL Error: ORA-00979: not a GROUP BY expression
+00979. 00000 -  "not a GROUP BY expression"
+*Cause:    
+*Action:
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST  MAX(SQFT)
+-- ----------
+IL     200000
+IN      50000
+WI     100000
+
+
+PROD       COST
+---- ----------
+L901     799.99
+L636     659.99
+D225     529.99
+D223     499.99
+D089     359.99
+D088     209.99
+M117     159.99
+T443     129.99
+L271      59.99
+
+9 rows selected. 
+
+
+DESCRIPTION                    TYPE                
+------------------------------ --------------------
+Table Lamp                     Furniture           
+Computer Table                 Furniture           
+Monitor                        Electronics         
+Computer Desk                  Furniture           
+
+
+PROD DESCRIPTION                          COST
+---- ------------------------------ ----------
+D088 Computer Desk                      209.99
+D223 Desktop Computer                   499.99
+D225 Desktop Computer                   529.99
+D089 Standing Desk                      359.99
+
+
+PID      AMOUNT
+---- ----------
+D223         60
+L271         42
+L901         35
+T443         20
+
+
+Error starting at line : 48 in command -
+SELECT *
+	FROM INVENTORY
+	GROUP BY DATE LastChecked
+Error at Command Line : 50 Column : 11
+Error report -
+SQL Error: ORA-00936: missing expression
+00936. 00000 -  "missing expression"
+*Cause:    
+*Action:
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST  MAX(SQFT)
+-- ----------
+IL     200000
+IN      50000
+WI     100000
+
+
+PROD       COST
+---- ----------
+L901     799.99
+L636     659.99
+D225     529.99
+D223     499.99
+D089     359.99
+D088     209.99
+M117     159.99
+T443     129.99
+L271      59.99
+
+9 rows selected. 
+
+
+DESCRIPTION                    TYPE                
+------------------------------ --------------------
+Table Lamp                     Furniture           
+Computer Table                 Furniture           
+Monitor                        Electronics         
+Computer Desk                  Furniture           
+
+
+PROD DESCRIPTION                          COST
+---- ------------------------------ ----------
+D088 Computer Desk                      209.99
+D223 Desktop Computer                   499.99
+D225 Desktop Computer                   529.99
+D089 Standing Desk                      359.99
+
+
+PID      AMOUNT
+---- ----------
+D223         60
+L271         42
+L901         35
+T443         20
+
+
+       WID PID      AMOUNT LASTCHECK
+---------- ---- ---------- ---------
+       333 T443         20 01-DEC-20
+       333 L271         42 01-DEC-20
+       444 M117         28 15-DEC-20
+       111 D088         90 18-DEC-20
+       111 D089         76 18-DEC-20
+       333 L901         35 01-JAN-21
+       333 D223         60 01-JAN-21
+       555 D223         50 01-JAN-21
+       666 D223         35 01-JAN-21
+       777 D223         60 01-JAN-21
+       444 T443         15 04-JAN-21
+
+11 rows selected. 
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST  MAX(SQFT)
+-- ----------
+IL     200000
+IN      50000
+WI     100000
+
+
+PROD       COST
+---- ----------
+L901     799.99
+L636     659.99
+D225     529.99
+D223     499.99
+D089     359.99
+D088     209.99
+M117     159.99
+T443     129.99
+L271      59.99
+
+9 rows selected. 
+
+
+DESCRIPTION                    TYPE                
+------------------------------ --------------------
+Table Lamp                     Furniture           
+Computer Table                 Furniture           
+Monitor                        Electronics         
+Computer Desk                  Furniture           
+
+
+PROD DESCRIPTION                          COST
+---- ------------------------------ ----------
+D088 Computer Desk                      209.99
+D223 Desktop Computer                   499.99
+D225 Desktop Computer                   529.99
+D089 Standing Desk                      359.99
+
+
+PID      AMOUNT
+---- ----------
+D223         60
+L271         42
+L901         35
+T443         20
+
+
+       WID PID      AMOUNT LASTCHECK
+---------- ---- ---------- ---------
+       333 T443         20 01-DEC-20
+       333 L271         42 01-DEC-20
+       444 M117         28 15-DEC-20
+       111 D088         90 18-DEC-20
+       111 D089         76 18-DEC-20
+       333 L901         35 01-JAN-21
+       333 D223         60 01-JAN-21
+       555 D223         50 01-JAN-21
+       666 D223         35 01-JAN-21
+       777 D223         60 01-JAN-21
+       444 T443         15 04-JAN-21
+
+11 rows selected. 
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST  MAX(SQFT)
+-- ----------
+IL     200000
+IN      50000
+WI     100000
+
+
+PROD       COST
+---- ----------
+L901     799.99
+L636     659.99
+D225     529.99
+D223     499.99
+D089     359.99
+D088     209.99
+M117     159.99
+T443     129.99
+L271      59.99
+
+9 rows selected. 
+
+
+DESCRIPTION                    TYPE                
+------------------------------ --------------------
+Table Lamp                     Furniture           
+Computer Table                 Furniture           
+Monitor                        Electronics         
+Computer Desk                  Furniture           
+
+
+PROD DESCRIPTION                          COST
+---- ------------------------------ ----------
+D088 Computer Desk                      209.99
+D223 Desktop Computer                   499.99
+D225 Desktop Computer                   529.99
+D089 Standing Desk                      359.99
+
+
+PID      AMOUNT
+---- ----------
+D223         60
+L271         42
+L901         35
+T443         20
+
+
+LASTCHECK
+---------
+01-DEC-20
+01-DEC-20
+15-DEC-20
+18-DEC-20
+18-DEC-20
+01-JAN-21
+01-JAN-21
+01-JAN-21
+01-JAN-21
+01-JAN-21
+04-JAN-21
+
+11 rows selected. 
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST  MAX(SQFT)
+-- ----------
+IL     200000
+IN      50000
+WI     100000
+
+
+PROD       COST
+---- ----------
+L901     799.99
+L636     659.99
+D225     529.99
+D223     499.99
+D089     359.99
+D088     209.99
+M117     159.99
+T443     129.99
+L271      59.99
+
+9 rows selected. 
+
+
+DESCRIPTION                    TYPE                
+------------------------------ --------------------
+Table Lamp                     Furniture           
+Computer Table                 Furniture           
+Monitor                        Electronics         
+Computer Desk                  Furniture           
+
+
+PROD DESCRIPTION                          COST
+---- ------------------------------ ----------
+D088 Computer Desk                      209.99
+D223 Desktop Computer                   499.99
+D225 Desktop Computer                   529.99
+D089 Standing Desk                      359.99
+
+
+PID      AMOUNT
+---- ----------
+D223         60
+L271         42
+L901         35
+T443         20
+
+
+Error starting at line : 48 in command -
+SELECT *
+	FROM INVENTORY
+	GROUP BY WID
+Error at Command Line : 48 Column : 8
+Error report -
+SQL Error: ORA-00979: not a GROUP BY expression
+00979. 00000 -  "not a GROUP BY expression"
+*Cause:    
+*Action:
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST  MAX(SQFT)
+-- ----------
+IL     200000
+IN      50000
+WI     100000
+
+
+PROD       COST
+---- ----------
+L901     799.99
+L636     659.99
+D225     529.99
+D223     499.99
+D089     359.99
+D088     209.99
+M117     159.99
+T443     129.99
+L271      59.99
+
+9 rows selected. 
+
+
+DESCRIPTION                    TYPE                
+------------------------------ --------------------
+Table Lamp                     Furniture           
+Computer Table                 Furniture           
+Monitor                        Electronics         
+Computer Desk                  Furniture           
+
+
+PROD DESCRIPTION                          COST
+---- ------------------------------ ----------
+D088 Computer Desk                      209.99
+D223 Desktop Computer                   499.99
+D225 Desktop Computer                   529.99
+D089 Standing Desk                      359.99
+
+
+PID      AMOUNT
+---- ----------
+D223         60
+L271         42
+L901         35
+T443         20
+
+
+       WID
+----------
+       111
+       333
+       444
+       555
+       666
+       777
+
+6 rows selected. 
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST  MAX(SQFT)
+-- ----------
+IL     200000
+IN      50000
+WI     100000
+
+
+PROD       COST
+---- ----------
+L901     799.99
+L636     659.99
+D225     529.99
+D223     499.99
+D089     359.99
+D088     209.99
+M117     159.99
+T443     129.99
+L271      59.99
+
+9 rows selected. 
+
+
+DESCRIPTION                    TYPE                
+------------------------------ --------------------
+Table Lamp                     Furniture           
+Computer Table                 Furniture           
+Monitor                        Electronics         
+Computer Desk                  Furniture           
+
+
+PROD DESCRIPTION                          COST
+---- ------------------------------ ----------
+D088 Computer Desk                      209.99
+D223 Desktop Computer                   499.99
+D225 Desktop Computer                   529.99
+D089 Standing Desk                      359.99
+
+
+PID      AMOUNT
+---- ----------
+D223         60
+L271         42
+L901         35
+T443         20
+
+
+LASTCHECK
+---------
+04-JAN-21
+01-JAN-21
+15-DEC-20
+18-DEC-20
+01-DEC-20
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST  MAX(SQFT)
+-- ----------
+IL     200000
+IN      50000
+WI     100000
+
+
+PROD       COST
+---- ----------
+L901     799.99
+L636     659.99
+D225     529.99
+D223     499.99
+D089     359.99
+D088     209.99
+M117     159.99
+T443     129.99
+L271      59.99
+
+9 rows selected. 
+
+
+DESCRIPTION                    TYPE                
+------------------------------ --------------------
+Table Lamp                     Furniture           
+Computer Table                 Furniture           
+Monitor                        Electronics         
+Computer Desk                  Furniture           
+
+
+PROD DESCRIPTION                          COST
+---- ------------------------------ ----------
+D088 Computer Desk                      209.99
+D223 Desktop Computer                   499.99
+D225 Desktop Computer                   529.99
+D089 Standing Desk                      359.99
+
+
+PID      AMOUNT
+---- ----------
+D223         60
+L271         42
+L901         35
+T443         20
+
+
+Error starting at line : 48 in command -
+SELECT LastChecked, COUNT(LastChcked)
+	FROM INVENTORY
+	GROUP BY LastChecked
+Error at Command Line : 48 Column : 27
+Error report -
+SQL Error: ORA-00904: "LASTCHCKED": invalid identifier
+00904. 00000 -  "%s: invalid identifier"
+*Cause:    
+*Action:
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST  MAX(SQFT)
+-- ----------
+IL     200000
+IN      50000
+WI     100000
+
+
+PROD       COST
+---- ----------
+L901     799.99
+L636     659.99
+D225     529.99
+D223     499.99
+D089     359.99
+D088     209.99
+M117     159.99
+T443     129.99
+L271      59.99
+
+9 rows selected. 
+
+
+DESCRIPTION                    TYPE                
+------------------------------ --------------------
+Table Lamp                     Furniture           
+Computer Table                 Furniture           
+Monitor                        Electronics         
+Computer Desk                  Furniture           
+
+
+PROD DESCRIPTION                          COST
+---- ------------------------------ ----------
+D088 Computer Desk                      209.99
+D223 Desktop Computer                   499.99
+D225 Desktop Computer                   529.99
+D089 Standing Desk                      359.99
+
+
+PID      AMOUNT
+---- ----------
+D223         60
+L271         42
+L901         35
+T443         20
+
+
+LASTCHECK COUNT(LASTCHECKED)
+--------- ------------------
+04-JAN-21                  1
+01-JAN-21                  5
+15-DEC-20                  1
+18-DEC-20                  2
+01-DEC-20                  2
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST  MAX(SQFT)
+-- ----------
+IL     200000
+IN      50000
+WI     100000
+
+
+PROD       COST
+---- ----------
+L901     799.99
+L636     659.99
+D225     529.99
+D223     499.99
+D089     359.99
+D088     209.99
+M117     159.99
+T443     129.99
+L271      59.99
+
+9 rows selected. 
+
+
+DESCRIPTION                    TYPE                
+------------------------------ --------------------
+Table Lamp                     Furniture           
+Computer Table                 Furniture           
+Monitor                        Electronics         
+Computer Desk                  Furniture           
+
+
+PROD DESCRIPTION                          COST
+---- ------------------------------ ----------
+D088 Computer Desk                      209.99
+D223 Desktop Computer                   499.99
+D225 Desktop Computer                   529.99
+D089 Standing Desk                      359.99
+
+
+PID      AMOUNT
+---- ----------
+D223         60
+L271         42
+L901         35
+T443         20
+
+
+LASTCHECK COUNT(LASTCHECKED)
+--------- ------------------
+04-JAN-21                  1
+15-DEC-20                  1
+01-DEC-20                  2
+18-DEC-20                  2
+01-JAN-21                  5
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST  MAX(SQFT)
+-- ----------
+IL     200000
+IN      50000
+WI     100000
+
+
+PROD       COST
+---- ----------
+L901     799.99
+L636     659.99
+D225     529.99
+D223     499.99
+D089     359.99
+D088     209.99
+M117     159.99
+T443     129.99
+L271      59.99
+
+9 rows selected. 
+
+
+DESCRIPTION                    TYPE                
+------------------------------ --------------------
+Table Lamp                     Furniture           
+Computer Table                 Furniture           
+Monitor                        Electronics         
+Computer Desk                  Furniture           
+
+
+PROD DESCRIPTION                          COST
+---- ------------------------------ ----------
+D088 Computer Desk                      209.99
+D223 Desktop Computer                   499.99
+D225 Desktop Computer                   529.99
+D089 Standing Desk                      359.99
+
+
+PID      AMOUNT
+---- ----------
+D223         60
+L271         42
+L901         35
+T443         20
+
+
+LASTCHECK COUNT(LASTCHECKED)
+--------- ------------------
+01-JAN-21                  5
+18-DEC-20                  2
+01-DEC-20                  2
+04-JAN-21                  1
+15-DEC-20                  1
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST  MAX(SQFT)
+-- ----------
+IL     200000
+IN      50000
+WI     100000
+
+
+PROD       COST
+---- ----------
+L901     799.99
+L636     659.99
+D225     529.99
+D223     499.99
+D089     359.99
+D088     209.99
+M117     159.99
+T443     129.99
+L271      59.99
+
+9 rows selected. 
+
+
+DESCRIPTION                    TYPE                
+------------------------------ --------------------
+Table Lamp                     Furniture           
+Computer Table                 Furniture           
+Monitor                        Electronics         
+Computer Desk                  Furniture           
+
+
+PROD DESCRIPTION                          COST
+---- ------------------------------ ----------
+D088 Computer Desk                      209.99
+D223 Desktop Computer                   499.99
+D225 Desktop Computer                   529.99
+D089 Standing Desk                      359.99
+
+
+PID      AMOUNT
+---- ----------
+D223         60
+L271         42
+L901         35
+T443         20
+
+
+LASTCHECK COUNT(LASTCHECKED)
+--------- ------------------
+01-JAN-21                  5
+18-DEC-20                  2
+01-DEC-20                  2
+04-JAN-21                  1
+15-DEC-20                  1
+
+
+       WID PID      AMOUNT LASTCHECK
+---------- ---- ---------- ---------
+       333 T443         20 01-DEC-20
+       333 L271         42 01-DEC-20
+       444 M117         28 15-DEC-20
+       111 D088         90 18-DEC-20
+       111 D089         76 18-DEC-20
+
+
+CITY                
+--------------------
+Darien
+Gary
+Janesville
+Racine
+Rockford
+
+
+COUNT(WAREHOUSEID)
+------------------
+                 4
+
+
+ST  MAX(SQFT)
+-- ----------
+IL     200000
+IN      50000
+WI     100000
+
+
+PROD       COST
+---- ----------
+L901     799.99
+L636     659.99
+D225     529.99
+D223     499.99
+D089     359.99
+D088     209.99
+M117     159.99
+T443     129.99
+L271      59.99
+
+9 rows selected. 
+
+
+DESCRIPTION                    TYPE                
+------------------------------ --------------------
+Table Lamp                     Furniture           
+Computer Table                 Furniture           
+Monitor                        Electronics         
+Computer Desk                  Furniture           
+
+
+PROD DESCRIPTION                          COST
+---- ------------------------------ ----------
+D088 Computer Desk                      209.99
+D223 Desktop Computer                   499.99
+D225 Desktop Computer                   529.99
+D089 Standing Desk                      359.99
+
+
+PID      AMOUNT
+---- ----------
+D223         60
+L271         42
+L901         35
+T443         20
+
+
+LASTCHECK COUNT(LASTCHECKED)
+--------- ------------------
+01-JAN-21                  5
+18-DEC-20                  2
+01-DEC-20                  2
+04-JAN-21                  1
+15-DEC-20                  1
+
+
+       WID PID  LASTCHECK
+---------- ---- ---------
+       333 T443 01-DEC-20
+       333 L271 01-DEC-20
+       444 M117 15-DEC-20
+       111 D088 18-DEC-20
+       111 D089 18-DEC-20
+
